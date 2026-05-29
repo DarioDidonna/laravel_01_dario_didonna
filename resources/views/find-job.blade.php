@@ -59,7 +59,6 @@
     <main class="find-job-section py-5">
         <div class="container">
 
-            <!-- Titolo della pagina -->
             <div class="row mb-4">
                 <div class="col-12">
                     <h1 class="page-title">Esplora le Offerte di Lavoro</h1>
@@ -69,7 +68,6 @@
             </div>
 
             <div class="row g-4">
-                <!-- SIDEBAR: FILTRI DI RICERCA -->
                 <aside class="col-lg-3">
                     <div class="filter-sidebar p-4">
                         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -78,7 +76,6 @@
                         </div>
 
                         <form action="#" method="GET">
-                            <!-- Filtro 1: Modalità di lavoro -->
                             <div class="filter-group mb-4">
                                 <label class="filter-label">Modalità di lavoro</label>
                                 <div class="form-check mb-2">
@@ -95,7 +92,6 @@
                                 </div>
                             </div>
 
-                            <!-- Filtro 2: Tipo di Contratto -->
                             <div class="filter-group mb-4">
                                 <label class="filter-label">Tipo di Contratto</label>
                                 <div class="form-check mb-2">
@@ -115,7 +111,6 @@
                                 </div>
                             </div>
 
-                            <!-- Filtro 3: Range Salariale (RAL) -->
                             <div class="filter-group mb-4">
                                 <label class="filter-label" for="salaryRange">RAL Minima (€)</label>
                                 <select class="form-select custom-select" id="salaryRange" name="min_salary">
@@ -132,9 +127,7 @@
                     </div>
                 </aside>
 
-                <!-- CONTENUTO PRINCIPALE: BARRA DI RICERCA + RISULTATI -->
                 <section class="col-lg-9">
-                    <!-- Barra di ricerca interna superiore -->
                     <div class="search-results-bar p-3 mb-4">
                         <form class="row g-2">
                             <div class="col-md-5 input-icon-group">
@@ -152,7 +145,6 @@
                         </form>
                     </div>
 
-                    <!-- Lista degli Annunci (Sfrutta lo stile delle card precedenti ma in versione compatta) -->
                     <div class="row g-3">
                         @forelse($jobs as $job)
                             <div class="col-12">
@@ -160,7 +152,6 @@
                                     <div
                                         class="card-body d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
 
-                                        <!-- Blocco Info Principali (Sinistra) -->
                                         <div class="d-flex align-items-center gap-3">
                                             <div class="search-company-logo">
                                                 <i class="bi bi-building-fill text-muted"></i>
@@ -172,7 +163,6 @@
                                                 </h5>
                                                 <p class="search-company-name mb-2">{{ $job->company_name }}</p>
 
-                                                <!-- Meta tag inline -->
                                                 <div class="search-job-meta d-flex flex-wrap gap-3">
                                                     <span class="meta-subitem"><i
                                                             class="bi bi-geo-alt me-1"></i>{{ $job->location }}</span>
@@ -186,7 +176,6 @@
                                             </div>
                                         </div>
 
-                                        <!-- Blocco Azione e Tag Alternativi (Destra) -->
                                         <div
                                             class="d-flex flex-row flex-md-column align-items-center align-items-md-end justify-content-between gap-2 border-top-mobile pt-3 pt-md-0">
                                             @if ($job->is_remote)
